@@ -1,13 +1,17 @@
+import { useDispatch } from 'react-redux';
+import { deleteContact } from 'redux/contactsSlice';
 import { Item, ItemWrapper, Text, Button } from './ListItem.styled';
 
-export const ListItem = ({ contact: { id, name, number }, onDelete }) => {
+export const ListItem = ({ contact: { id, name, number } }) => {
+  const dispatch = useDispatch();
+
   return (
-    <Item key={id}>
+    <Item>
       <ItemWrapper>
         <Text>{name}:</Text>
         <Text>{number}</Text>
 
-        <Button type="button" onClick={() => onDelete(id)}>
+        <Button type="button" onClick={() => dispatch(deleteContact(id))}>
           Delete
         </Button>
       </ItemWrapper>
