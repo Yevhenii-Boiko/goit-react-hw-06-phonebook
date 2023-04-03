@@ -1,6 +1,5 @@
 import { useSelector } from 'react-redux';
 import { getContacts } from 'redux/contactsSlice';
-// import { selectContacts } from 'redux/selectors';
 import { ContactForm } from './ContactForm/ContactForm';
 import { Layout } from './Layout/Layout';
 import { GlobalStyle } from 'GlobalStyle';

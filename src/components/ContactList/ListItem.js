@@ -1,5 +1,6 @@
 import { useDispatch } from 'react-redux';
 import { deleteContact } from 'redux/contactsSlice';
+import { MdDelete } from 'react-icons/md';
 import { Item, ItemWrapper, Text, Button } from './ListItem.styled';
 
 export const ListItem = ({ contact: { id, name, number } }) => {
@@ -12,7 +13,8 @@ export const ListItem = ({ contact: { id, name, number } }) => {
         <Text>{number}</Text>
 
         <Button type="button" onClick={() => dispatch(deleteContact(id))}>
-          Delete
+          {/* Delete */}
+          <MdDelete />
         </Button>
       </ItemWrapper>
     </Item>
