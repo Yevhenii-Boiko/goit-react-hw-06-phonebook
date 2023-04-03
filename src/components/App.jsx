@@ -18,8 +18,8 @@ export const App = () => {
       <SectionTitle>Contacts</SectionTitle>
       {contacts.length > 0 && (
         <>
-          <ContactList />
           <Filter />
+          <ContactList />
         </>
       )}
     </Layout>
